@@ -1,0 +1,24 @@
+spring:
+  ai:
+    vectorstore:
+      pgvector:
+        dimensions: 384
+        index-type: hnsw
+        distance-type: cosine_distance
+        max-document-batch-size: 10000
+    moonshot:
+      api-key: sk-DiL7BwQ9F89CyvNzQfWq9uL24oy7obsBZEQe9Wc8Nscz79P7
+    ollama:
+      chat:
+        options:
+          model: deepseek-r1:8b
+      embedding:
+        options:
+          model: all-minilm
+  application:
+    name: my-ai
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
